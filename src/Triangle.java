@@ -37,14 +37,14 @@ public class Triangle extends Shape implements Geometry{
     }
     @Override
     public double getSquare(){
-        double p = (sideA + sideB + sideC) / 2; // it's half perimetr of triangle need for square
-        return Math.sqrt(p * (p -sideA) * (p - sideB) * (p - sideC));
+        double halfPerimetr = (sideA + sideB + sideC) / 2;
+        return Math.sqrt(halfPerimetr * (halfPerimetr -sideA) * (halfPerimetr - sideB) * (halfPerimetr - sideC));
     }
 
 
     @Override
     public String getFigure(){
         return "This is " + getClass() + "\n " + getTriangleType() +
-                "\n it's have side's A,B,C " + sideA + ","+ sideB + "," + sideC + "," + " length";
+                "\n it's have side's A,B,C " + sideA + ","+ sideB + "," + sideC  + " length";
     }
 }

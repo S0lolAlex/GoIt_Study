@@ -1,33 +1,35 @@
 public class Cube extends Shape implements Geometry{
-    private final double cubeSide;
+    private final double sideLength;
+    private final int SIDECOUNT = 6;
+    private final int FACETS = 12;
 
     public Cube(double side){
-        cubeSide = side;
+        sideLength = side;
     }
 
     public double getSide(){
-        return cubeSide;
+        return sideLength;
     }
     @Override
     public double getSquare(){
-        return 6 * Math.pow(cubeSide, 2);
+        return SIDECOUNT * Math.pow(sideLength, 2);
     }
 
-    public double getCubeCapacity(){
-        return Math.pow(cubeSide, 3);
+    public double getCapacity(){
+        return Math.pow(sideLength, 3);
     }
     @Override
     public double getPerimetr(){
-        return 12 * cubeSide;
+        return FACETS * sideLength;
     }
 
-    public double getCubeDiagonal(){
-        return cubeSide * Math.sqrt(3);
+    public double getDiagonal(){
+        return sideLength * Math.sqrt(3);
     }
 
 
     @Override
     public String getFigure(){
-        return "This is " + getClass() + "\n cube side is: " + cubeSide;
+        return "This is " + getClass() + "\n cube side is: " + sideLength;
     }
 }

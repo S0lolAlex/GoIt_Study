@@ -1,5 +1,6 @@
 public class Rectangle extends Shape implements Geometry{
-    private final double sideA, sideB;
+    private final double sideA;
+    private final double sideB;
 
     public Rectangle(double a, double b){
         sideA = a;
@@ -23,6 +24,6 @@ public class Rectangle extends Shape implements Geometry{
     }
     @Override
     public String getFigure(){
-        return "This is " + getClass() + "\n it's have side A " + sideA +"length and side B " + sideB + " length";
+        return "This is " + getClass() + "\n it's have side A " + sideA +" length and side B " + sideB + " length";
     }
 }

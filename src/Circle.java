@@ -1,6 +1,5 @@
 public class Circle extends Shape implements Geometry{
     private final double radius;
-    private final double PI = 3.14;
 
     public Circle(double radius){
         this.radius = radius;
@@ -10,11 +9,12 @@ public class Circle extends Shape implements Geometry{
     }
     @Override
     public double getSquare(){
-        return PI * Math.pow(radius,2);
+        return Math.PI * Math.pow(radius,2);
+
     }
     @Override
     public double getPerimetr(){
-        return 2 * PI * radius;
+        return 2 * Math.PI * radius;
     }
 
     @Override

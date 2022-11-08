@@ -1,5 +1,6 @@
 public class RegularHexagon extends Shape implements Geometry{
     private final double side;
+    private final int SIDECOUNT = 6;
 
     public RegularHexagon(double side){
         this.side = side;
@@ -10,7 +11,7 @@ public class RegularHexagon extends Shape implements Geometry{
     }
     @Override
     public double getPerimetr(){
-        return 6 * side;
+        return SIDECOUNT * side;
     }
     @Override
     public double getSquare(){
